@@ -1,0 +1,37 @@
+<div class="tariff-card" *ngIf="tariff">
+  <div class="tariff-details">
+    <div class="tariff-number">
+      <span>{{ tariff.id }}</span>
+    </div>
+    <h3 class="tariff-name">{{ tariff.name }}</h3>
+    <div class="tariff-speeds">
+      <div class="speed">
+        <label>Download</label>
+        <div class="speed-box">
+          <span class="icon"
+            ><img src="assets/arrow-down.svg" alt="Arrow Down"
+          /></span>
+          <span class="value">{{ tariff.downloadSpeed }} Mbit/s</span>
+        </div>
+      </div>
+      <div class="speed">
+        <label>Upload</label>
+        <div class="speed-box">
+          <span class="icon"
+            ><img src="assets/arrow-up.svg" alt="Arrow Up"
+          /></span>
+          <span class="value">{{ tariff.uploadSpeed }} Mbit/s </span>
+        </div>
+      </div>
+    </div>
+    <div class="tariff-benefits">
+      <ul class="benefits">
+        <li *ngFor="let benefit of tariff.benefits">{{ benefit }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="tariff-price">
+    <span class="price">{{ tariff.price.formatted }}</span>
+    <button class="to-tariff-button"><span>To Tariff </span>&gt;</button>
+  </div>
+</div>

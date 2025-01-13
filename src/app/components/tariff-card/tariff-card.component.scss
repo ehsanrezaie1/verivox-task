@@ -1,0 +1,161 @@
+.tariff-card {
+  display: flex;
+  border: 1px solid #cdcbca;
+  padding: 16px;
+  margin: 8px 0;
+  border-radius: 0.1875rem;
+  background-color: #fff;
+  justify-content: space-between;
+  gap: 24px;
+
+  &:hover {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+
+  .tariff-number {
+    flex: 0 0 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .tariff-details {
+    flex: 1;
+    display: flex;
+    gap: 36px;
+
+    .tariff-name {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      max-width: 40%;
+    }
+
+    .tariff-speeds {
+      display: flex;
+      margin-bottom: 8px;
+      flex-direction: column;
+      .speed {
+        margin-right: 16px;
+
+        label {
+          display: block;
+          font-size: 14px;
+          color: #666;
+        }
+
+        .speed-box {
+          display: flex;
+          margin-top: 4px;
+          padding: 4px 8px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+
+          .icon {
+            margin-right: 8px;
+            font-size: 14px;
+            color: #666;
+            width: 10px;
+            height: 10px;
+          }
+
+          .value {
+            font-size: 0.8rem;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+
+    .benefits {
+      list-style: circle;
+      padding: 0;
+      margin: 0;
+      font-size: 14px;
+      color: #666;
+
+      li {
+        position: relative;
+        margin: 3px 0 6px;
+        line-height: 16px;
+      }
+    }
+  }
+
+  .tariff-price {
+    flex: 0 0 150px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .price {
+      font-size: 1rem;
+      line-height: 1.24rem;
+      font-weight: 600;
+      color: #333;
+      display: block;
+      margin-bottom: 8px;
+      white-space: nowrap;
+    }
+
+    .to-tariff-button {
+      font-size: 14px;
+      font-weight: bold;
+      border: none;
+      background-color: #ff5600;
+      border-radius: 4px;
+      padding: 8px 24px 9px 24px;
+      cursor: pointer;
+      color: #fff;
+
+      &:hover {
+        background-color: #ce4704;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .tariff-details {
+      gap: 6px;
+    }
+
+    .tariff-price {
+      flex: 0;
+    }
+    .to-tariff-button {
+      padding: 8px;
+    }
+    .to-tariff-button span {
+      display: none;
+    }
+    .speed-box {
+      border: none !important;
+      padding: 0px !important;
+    }
+    .tariff-price {
+      flex-direction: row !important;
+      gap: 4px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .tariff-card {
+    gap: 4px !important;
+
+    .tariff-name {
+      font-size: 0.7rem !important;
+    }
+
+    .tariff-benefits {
+      display: none;
+    }
+    .speed label {
+      display: none !important;
+    }
+    .to-tariff-button {
+      padding: 8px !important;
+    }
+  }
+}

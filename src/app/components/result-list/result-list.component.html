@@ -1,0 +1,27 @@
+<div class="header">
+  <div class="header-content">
+    <img src="logo.png" style="height: 40px" />
+  </div>
+</div>
+
+<div class="main">
+  <div class="filter-container">
+    <label for="sort">Sort by:</label>
+    <select class="sort" id="sort" (change)="onSortChange($event)">
+      <option value="">Select an option</option>
+      <option value="price">Price</option>
+      <option value="downloadSpeed">Download Speed</option>
+      <option value="uploadSpeed">Upload Speed</option>
+    </select>
+  </div>
+  <div class="" *ngFor="let tariff of filteredTariffs">
+    <app-tariff-card
+      [tariff]="tariff"
+      [tariffName]="'Super Fast Internet'"
+      [downloadSpeed]="'50 Mbit/s'"
+      [uploadSpeed]="'20 Mbit/s'"
+      [benefits]="['Unlimited Data', 'Free Router', '24/7 Support']"
+      [price]="'199,99 €'"
+    ></app-tariff-card>
+  </div>
+</div>

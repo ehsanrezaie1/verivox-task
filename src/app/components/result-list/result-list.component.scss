@@ -1,0 +1,35 @@
+.main {
+  max-width: 68rem;
+  margin: 40px auto;
+
+  .sort {
+    padding: 4px;
+    font-weight: 500;
+    border-radius: 4px;
+  }
+}
+.header {
+  box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.2);
+
+  .header-content {
+    padding: 16px 0px;
+    max-width: 68rem;
+    margin: 0px auto;
+  }
+}
+.filter-container {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+
+  label {
+    margin-right: 0.5rem;
+  }
+}
+
+.result-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
